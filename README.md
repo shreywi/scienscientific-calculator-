@@ -2,6 +2,8 @@
 
 A modern, responsive scientific calculator built with HTML, CSS, and JavaScript.
 
+ https://shreywi.github.io/scienscientific-calculator-/
+
 ## Features
 
 - Basic arithmetic: `+`, `-`, `*`, `/`
