@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="calculator-card" aria-label="Scientific calculator">
+      <header class="card-topbar">
+        <div>
+          <p class="eyebrow">Math Lab</p>
+          <h1>Scientific Calculator</h1>
+        </div>
+        <button id="mode-toggle" class="pill-btn" data-action="toggle-mode" aria-label="Toggle angle mode">
+          DEG
+        </button>
+      </header>
+
+      <section class="screen" aria-live="polite">
+        <p id="expression" class="expression">0</p>
+        <p id="result" class="result">0</p>
+      </section>
+
+      <section class="controls-grid" aria-label="Calculator keys">
+        <button class="key soft" data-action="clear-all">AC</button>
+        <button class="key soft" data-action="backspace">DEL</button>
+        <button class="key soft" data-value="(">(</button>
+        <button class="key soft" data-value=")">)</button>
+        <button class="key soft" data-value="%">%</button>
+        <button class="key operator" data-value="/">÷</button>
+
+        <button class="key soft" data-action="memory-clear">MC</button>
+        <button class="key soft" data-action="memory-recall">MR</button>
+        <button class="key soft" data-action="memory-add">M+</button>
+        <button class="key soft" data-action="memory-subtract">M-</button>
+        <button class="key soft" data-value="pi">π</button>
+        <button class="key operator" data-value="*">×</button>
+
+        <button class="key function" data-value="sin(">sin</button>
+        <button class="key function" data-value="cos(">cos</button>
+        <button class="key function" data-value="tan(">tan</button>
+        <button class="key function" data-value="log(">log</button>
+        <button class="key function" data-value="ln(">ln</button>
+        <button class="key operator" data-value="-">-</button>
+
+        <button class="key function" data-value="sqrt(">sqrt</button>
+        <button class="key function" data-value="abs(">abs</button>
+        <button class="key function" data-value="exp(">exp</button>
+        <button class="key function" data-value="^">x^y</button>
+        <button class="key function" data-value="!">x!</button>
+        <button class="key operator" data-value="+">+</button>
+
+        <button class="key number" data-value="7">7</button>
+        <button class="key number" data-value="8">8</button>
+        <button class="key number" data-value="9">9</button>
+        <button class="key number" data-value="4">4</button>
+        <button class="key number" data-value="5">5</button>
+        <button class="key number" data-value="6">6</button>
+
+        <button class="key number" data-value="1">1</button>
+        <button class="key number" data-value="2">2</button>
+        <button class="key number" data-value="3">3</button>
+        <button class="key number wide" data-value="0">0</button>
+        <button class="key number" data-value=".">.</button>
+        <button class="key equals" data-action="evaluate">=</button>
+      </section>
+    </section>
+
+    <aside class="history-card" aria-label="Calculation history">
+      <div class="history-head">
+        <h2>History</h2>
+        <button class="pill-btn danger" data-action="history-clear">Clear</button>
+      </div>
+      <ol id="history-list" class="history-list">
+        <li class="history-empty">No calculations yet.</li>
+      </ol>
+      <p class="hint">
+        Keyboard: Enter = evaluate, Backspace = delete, Esc = clear
+      </p>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
